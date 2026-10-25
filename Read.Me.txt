@@ -1,0 +1,22 @@
+PJ1 RET503 - Eksperimen YOLO
+
+Dataset:
+- Sumber: COCO 2017 validation subset
+- Kelas: person, car, cup
+- Train: 406 gambar
+- Validation: 116 gambar
+- Test: 58 gambar
+
+Eksperimen:
+- E1: YOLO26n pretrained, imgsz=416, epochs=30
+- E3: YOLO26n pretrained, imgsz=640, epochs=30
+
+Metrik evaluasi dan hasil per eksperimen tersedia di
+hasil_praktik_4222401038.csv dan hasil_praktik_4222401038.txt.
+
+Catatan:
+Dataset test berasal dari subset COCO 2017 validation yang
+sama sumbernya dengan data yang dipakai untuk penyusunan
+train dan validation. Karena itu, hasil perlu ditafsirkan
+sebagai evaluasi pada subset ini, bukan pengujian independen
+dari sumber data terpisah.

@@ -1,0 +1,38 @@
+HASIL PRAKTIK PJ1 RET503 - YOLO
+
+   Eksperimen  Precision   Recall    mAP50  mAP50_95  Jumlah_gambar_test
+E1_pretrained   0.678094 0.466957 0.537687  0.306093                  58
+    E3_tuning   0.660877 0.607263 0.653029  0.419231                  58
+
+Dataset: COCO 2017 validation subset
+Kelas: person, car, cup
+Pembagian: train 406, validation 116, test 58
+
+
+ANALISIS HASIL EKSPERIMEN
+
+E1 menggunakan model YOLO26n pretrained dengan imgsz 416
+dan 30 epoch. E1 memperoleh precision 0.6781, recall 0.4670,
+mAP50 0.5377, dan mAP50-95 0.3061.
+
+E3 menggunakan model YOLO26n pretrained dengan imgsz 640
+dan 30 epoch. E3 memperoleh precision 0.6609, recall 0.6073,
+mAP50 0.6530, dan mAP50-95 0.4192.
+
+PERBANDINGAN
+
+Dibandingkan E1, E3 mengalami penurunan precision sebesar
+0.0172, tetapi recall meningkat sebesar 0.1403.
+Nilai mAP50 meningkat sebesar 0.1153 dan mAP50-95 meningkat
+sebesar 0.1131.
+
+Berdasarkan hasil tersebut, E3 menunjukkan performa deteksi
+keseluruhan yang lebih baik pada dataset test yang digunakan,
+meskipun precision-nya sedikit lebih rendah daripada E1.
+
+KETERBATASAN
+
+Dataset test berasal dari subset COCO 2017 validation yang
+sama sumbernya dengan data train dan validation. Oleh karena
+itu, hasil ini belum dapat dianggap sebagai evaluasi independen
+pada dataset dari sumber terpisah.
